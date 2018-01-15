@@ -1,0 +1,9 @@
+# OpenSSL certificate and key
+*.crt
+*.key
+
+# Azure AD OAuth secrets 
+secrets.py
+
+#python3 stuff
+__pycache__/
