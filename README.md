@@ -5,7 +5,7 @@ This extends the [example provided by MS Azure](https://github.com/Azure-Samples
 ## Installation 
 
 ```
-sudo pip install Flask flask-oauthlib flask-sslify
+sudo pip install Flask flask-oauthlib
 ```
 
 Register your Azure AD v2.0 app.  
