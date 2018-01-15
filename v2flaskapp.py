@@ -1,21 +1,18 @@
 from flask import Flask, redirect, url_for, session, request, jsonify, render_template
 from flask_oauthlib.client import OAuth, OAuthException
 
-from flask_sslify import SSLify
-
 from logging import Logger
 import uuid
 
 app = Flask(__name__)
-sslify = SSLify(app)
-app.debug = True
-app.secret_key = 'development'
+#app.debug = True
 oauth = OAuth(app)
 
 # Put your consumer key and consumer secret into a config file
 # and don't check it into github!!
-from secrets import (CONSUMER_KEY, CONSUMER_PASSWORD)
+from secrets import (SECRET_KEY, CONSUMER_KEY, CONSUMER_PASSWORD)
 
+app.secret_key = SECRET_KEY
 
 microsoft = oauth.remote_app(
 	'microsoft',
