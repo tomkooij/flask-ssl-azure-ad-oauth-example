@@ -12,10 +12,22 @@ Register your Azure AD v2.0 app.
     - Click "Generate New Password' and record your Consumer Secret.  
 
 
+Create self-signed cert:
+```
+openssl req \
+       -newkey rsa:2048 -nodes -keyout key.key \
+              -x509 -days 365 -out cert.crt
+```
+
 add your Application/Client ID and Consumer Secret to secrets.py.
 
 
 ```
 $ python v2flaskapp.py 
 ```
+
+## License.
+
+This is based on: https://github.com/Azure-Samples/active-directory-python-flask-graphapi-web-v2
+Copyright 2017, Microsoft. MIT License.
 
